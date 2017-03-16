@@ -1,0 +1,212 @@
+body {
+    font-family: 'PT Sans', sans-serif;
+    margin: 0;
+}
+
+.required {
+    color: red;
+}
+
+#priorityIndc {
+    margin-left: 10px;
+    color: white;
+    border-radius: 50px;
+    padding: 2px 20px 2px 20px;
+}
+
+input[type="text"], input[type="search"] {
+    padding: 12px;
+    border-radius: 7px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    width: 500px;
+}
+
+header {
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: white;
+    padding: 0px 0px 0px 20px;
+    -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
+    height: 70px;
+}
+
+form {
+    height: 700px;
+    overflow-y: auto;
+    margin-top: 70px;
+    margin-left: 20px;
+}
+
+footer {
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: white;
+    padding: 20px 20px 20px 0px;
+    -webkit-box-shadow: 0px -2px 14px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px -2px 14px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px -2px 14px -2px rgba(0, 0, 0, 0.75);
+}
+
+#footerBtns {
+    float: right;
+}
+
+#footerBtns #cancelBtn {
+    border-radius: 7px;
+    background-color: #e6e6e6;
+    margin-right: 10px;
+    border: none;
+    padding: 5px 15px 5px 15px;
+}
+
+#footerBtns #saveBtn {
+    border-radius: 7px;
+    background-color: #1f89ff;
+    border: none;
+    padding: 5px 15px 5px 15px;
+    color: white;
+}
+
+#browseBtn {
+    border-radius: 7px;
+    background-color: #e6e6e6;
+    border: none;
+    padding: 12px 25px 12px 25px;
+}
+
+#affectedUser {
+    position: relative;
+    margin-top: 10px;
+}
+
+#nameSuggest {
+    position: absolute;
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    width: 524px;
+    -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
+}
+
+#nameSuggest > div {
+    padding: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+#nameSuggest > div:hover {
+    background-color: lightgray;
+}
+
+#loader {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: white;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #1f89ff;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: loaderanim 1s linear infinite;
+    animation: loaderanim 1s linear infinite;
+}
+
+@-webkit-keyframes loaderanim {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes loaderanim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#notification {
+    padding: 16px;
+    position: fixed;
+    z-index: 3;
+    left: 50%;
+    bottom: 30px;
+    visibility: collapse;
+    min-width: 300px;
+    margin-left: -125px;
+    background-color: #4f7ae6;
+    color: #fff;
+    border-radius: 20px;
+    text-align: center;
+    border-radius: 2px;
+}
+
+#notification.visible {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
